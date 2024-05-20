@@ -25,4 +25,8 @@ public class PersonController {
        return personServices.findById(Id);
     }
 
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<PersonModel> findAll(){
+        return personServices.findAll();
+    }
 }
